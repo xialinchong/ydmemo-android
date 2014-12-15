@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/repeat_by_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/by_btn_selector"
+            android:text="@string/by_day"
+            android:textColor="@drawable/text_color_selector" />
+
+        <Button
+            android:id="@+id/repeat_by_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/by_btn_selector"
+            android:text="@string/by_week"
+            android:textColor="@drawable/text_color_selector" />
+
+        <Button
+            android:id="@+id/repeat_by_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/by_btn_selector"
+            android:text="@string/by_month"
+            android:textColor="@drawable/text_color_selector" />
+
+        <Button
+            android:id="@+id/repeat_by_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/by_btn_selector"
+            android:text="@string/by_year"
+            android:textColor="@drawable/text_color_selector" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/select_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white" >
+
+            <Button
+                android:id="@+id/start_time_btn"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/mask_btn_selector"
+                android:gravity="right|center"
+                android:minHeight="44dp"
+                android:paddingLeft="110dp"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="44dp"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="@string/start_time"
+                android:textColor="@color/subtitle" />
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_div2" />
+
+        <!--
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white" >
+
+            <Button
+                android:id="@+id/end_time_btn"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/mask_btn_selector"
+                android:gravity="left|center"
+                android:minHeight="44dp"
+                android:paddingLeft="80dp"
+                android:text="@string/never" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:drawableRight="@drawable/date_and_time"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="@string/end_time"
+                android:textColor="@color/subtitle" />
+        </FrameLayout>
+        -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="44dp"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="@string/end_time"
+                android:textColor="@color/subtitle" />
+
+            <Button
+                android:id="@+id/end_time_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="44dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/mask_btn_selector"
+                android:gravity="right|center"
+                android:minHeight="44dp"
+                android:paddingLeft="110dp"
+                android:paddingRight="10dp"
+                android:text="@string/never"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/btn_never"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:src="@drawable/cancel_selector"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_div2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white" >
+
+            <TextView
+                android:id="@+id/unit"
+                android:layout_width="35dp"
+                android:layout_height="44dp"
+                android:layout_alignParentRight="true"
+                android:gravity="right|center"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textColor="@color/subtitle" />
+
+            <EditText
+                android:id="@+id/repeat_times"
+                android:layout_width="fill_parent"
+                android:layout_height="44dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="47dp"
+                android:background="@android:color/white"
+                android:ems="10"
+                android:gravity="right|center"
+                android:inputType="number"
+                android:minHeight="44dp"
+                android:paddingLeft="170dp"
+                android:text=""
+                android:textSize="14sp" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/repeat_times_hint"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="@string/day_times"
+                android:textColor="@color/subtitle" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_div2" />
+
+        <LinearLayout
+            android:id="@+id/day_of_week_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="@string/day_of_the_week"
+                android:textColor="@color/subtitle" />
+
+            <!--
+                 <Spinner
+                android:id="@+id/week_spinner"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:entries="@array/days" />
+            -->
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarAlwaysDrawHorizontalTrack="false" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp" >
+
+                    <Button
+                        android:id="@+id/monday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/by_btn_selector"
+                        android:text="@string/monday"
+                        android:textColor="@drawable/text_color_selector" />
+
+                    <Button
+                        android:id="@+id/tuesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/by_btn_selector"
+                        android:text="@string/tuesday"
+                        android:textColor="@drawable/text_color_selector" />
+
+                    <Button
+                        android:id="@+id/wednesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/by_btn_selector"
+                        android:text="@string/wednesday"
+                        android:textColor="@drawable/text_color_selector" />
+
+                    <Button
+                        android:id="@+id/thursday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/by_btn_selector"
+                        android:text="@string/thursday"
+                        android:textColor="@drawable/text_color_selector" />
+
+                    <Button
+                        android:id="@+id/firday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/by_btn_selector"
+                        android:text="@string/friday"
+                        android:textColor="@drawable/text_color_selector" />
+
+                    <Button
+                        android:id="@+id/saturday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/by_btn_selector"
+                        android:text="@string/saturday"
+                        android:textColor="@drawable/text_color_selector" />
+
+                    <Button
+                        android:id="@+id/sunday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/by_btn_selector"
+                        android:text="@string/sunday"
+                        android:textColor="@drawable/text_color_selector" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

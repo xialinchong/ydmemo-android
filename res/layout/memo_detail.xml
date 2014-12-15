@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile_background"
+    android:clickable="true" >
+
+    <include
+        android:id="@+id/error"
+        layout="@layout/error"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/loading"
+        layout="@layout/loading"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/memo_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/tablayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/memo_followers"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mask_btn_selector"
+                    android:drawableTop="@drawable/memo"
+                    android:text="@string/memo"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/memo_comments"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mask_btn_selector"
+                    android:drawableTop="@drawable/comment"
+                    android:text="@string/comment"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/memo_reminders"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mask_btn_selector"
+                    android:drawableTop="@drawable/tracer"
+                    android:text="@string/trace"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/cursor"
+                android:layout_width="60dp"
+                android:layout_height="2dp"
+                android:background="@drawable/xiahua"
+                android:scaleType="matrix"
+                android:src="@null" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/menu_div" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/subview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</RelativeLayout>

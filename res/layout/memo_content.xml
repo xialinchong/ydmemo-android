@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@android:color/white"
+     android:paddingTop="5dp" 
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp" 
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/memo_detail_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <com.yidianhulian.ydmemo.view.CircleImageView
+                android:id="@+id/memo_assigner_avatar"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="5dp"
+                android:contentDescription="@string/avatar"
+                android:src="@drawable/avatar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/memo_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:background="@null"
+                    android:textColor="@android:color/black"
+                    android:enabled="false"
+                    android:inputType="textMultiLine"
+                    android:text="@string/placeholder"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:contentDescription="@string/seprate_line"
+                    android:src="@drawable/menu_div2" />
+
+                <TextView
+                    android:id="@+id/memo_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/placeholder"
+                    android:textColor="@color/datecolor" />
+
+                <FrameLayout
+                    android:id="@+id/desc_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:visibility="gone" 
+                    android:layout_weight="1" >
+                    
+                    <EditText
+                        android:id="@+id/memo_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp"
+                        android:ems="10"
+                        android:enabled="true"
+                        android:inputType="textMultiLine"
+                        android:text="@string/placeholder"
+                        android:textColor="@android:color/black"
+                        >
+
+	                    <requestFocus />
+	                </EditText>
+                    
+                </FrameLayout>
+                <TextView
+                    android:id="@+id/desc_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:textSize="18sp"
+                    android:singleLine="false"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/memo_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/memo_detail_action"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:src="@drawable/edit_selector" />
+        <ImageButton
+            android:id="@+id/memo_detail_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:src="@drawable/cancel" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/memo_followers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/memo_users" />
+
+</LinearLayout>

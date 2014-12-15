@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="top"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/trace_date"
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/placeholder"
+        android:textColor="@color/subtitle"
+        android:textSize="11sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/menu_div" />
+
+        <ImageButton
+            android:id="@+id/trace_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/trace_type_bg"
+            android:src="@drawable/point" />
+    </RelativeLayout>
+
+    <ViewStub
+        android:id="@+id/trace_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

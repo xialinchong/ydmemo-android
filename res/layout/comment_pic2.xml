@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pic_comment"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <Button
+        android:id="@+id/pic_comment_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/pic_comment_pop"
+        android:layout_alignLeft="@+id/pic_comment_pop"
+        android:layout_alignRight="@+id/pic_comment_pop"
+        android:layout_alignTop="@+id/pic_comment_pop"
+        android:background="@drawable/my_comment_selector"
+        android:text="" />
+
+    <LinearLayout
+        android:id="@+id/pic_comment_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:maxHeight="100dp"
+                android:maxWidth="100dp"
+                android:src="@drawable/image" />
+
+            <TextView
+                android:id="@+id/pic_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pic"
+                android:layout_alignLeft="@+id/pic"
+                android:layout_alignRight="@+id/pic"
+                android:layout_alignTop="@+id/pic"
+                android:background="@color/black_alpha"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/pic_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/subtitle"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:text="@string/placeholder"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/pic_trace_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pic_comment_pop"
+        android:numColumns="auto_fit"
+        android:background="@null" />
+</RelativeLayout>

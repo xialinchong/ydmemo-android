@@ -1,0 +1,69 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 对话框样式 -->
+    <style name="MemoDialog" parent="android:Theme.Holo.Light.Dialog"></style>
+    <!-- actionbar样式 -->
+    <style name="MemoActionbar" parent="android:Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/drawer_bg_color</item>
+        <item name="android:titleTextStyle">@style/ActionBarTitle</item>
+    </style>
+
+    <!-- 更多菜单图标 -->
+    <style name="whiteActionOverflowButtonStyle" parent="@android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/more</item>
+    </style>
+
+    <!-- actionbar样式：文字颜色 -->
+    <style name="ActionBarTitle" parent="@android:style/TextAppearance.Holo.Large">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- 自定义App主题 -->
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- actionbar -->
+        <item name="android:actionBarStyle">@style/MemoActionbar</item>
+        <item name="android:homeAsUpIndicator">@drawable/back</item>
+        <item name="android:actionOverflowButtonStyle">@style/whiteActionOverflowButtonStyle</item>
+        <!-- 主背景 -->
+        <item name="android:windowBackground">@drawable/memo_background</item>
+        <!-- 对话框 -->
+        <item name="android:alertDialogStyle">@style/MemoDialog</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="AlarmAnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/alarm_popup</item>
+        <item name="android:windowExitAnimation">@anim/alarm_fadein</item>
+    </style>
+
+    <style name="AlarmDialogStyleBottom" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:windowAnimationStyle">@style/AlarmAnimBottom</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/alarm_bg</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- 自定义透明布局主题 xialinchong-->
+    <style name="translucent">
+        <item name="android:windowBackground">@color/black_alpha</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+</resources>

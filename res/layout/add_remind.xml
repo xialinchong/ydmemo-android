@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" >
+
+        <EditText
+            android:id="@+id/add_remind_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:minHeight="44dp"
+            android:paddingLeft="110dp"
+            android:paddingRight="10dp" >
+        </EditText>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:gravity="left|center"
+            android:paddingLeft="10dp"
+            android:text="@string/remind_title"
+            android:textColor="@color/subtitle" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menu_div2" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" >
+
+        <Button
+            android:id="@+id/add_remind_date_btn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/mask_btn_selector"
+            android:gravity="left|center"
+            android:minHeight="44dp"
+            android:paddingLeft="110dp"
+            android:drawableRight="@drawable/date_and_time"
+            android:paddingRight="10dp"
+            android:text="" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:gravity="left|center"
+            android:paddingLeft="10dp"
+            android:text="@string/remind_date"
+            android:textColor="@color/subtitle" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menu_div2" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" >
+
+        <Button
+            android:id="@+id/remind_repeat_btn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/mask_btn_selector"
+            android:gravity="left|center"
+            android:minHeight="44dp"
+            android:drawableRight="@drawable/detail"
+            android:paddingRight="10dp"
+            android:paddingLeft="110dp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:gravity="left|center"
+            android:paddingLeft="10dp"
+            android:text="@string/remind_repeat"
+            android:textColor="@color/subtitle" />
+        
+        <ImageButton
+            android:id="@+id/btn_clear_repeat"
+            android:layout_width="44dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="15dp"
+            android:background="@null"
+            android:src="@drawable/cancel_selector"
+            android:layout_gravity="right"
+            android:visibility="gone"
+         />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menu_div2" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" >
+
+        <Button
+            android:id="@+id/remind_addr_btn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/mask_btn_selector"
+            android:ellipsize="middle"
+            android:gravity="left|center"
+            android:minHeight="44dp"
+            android:paddingLeft="110dp"
+            android:drawableRight="@drawable/detail"
+            android:paddingRight="10dp"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:gravity="left|center"
+            android:paddingLeft="10dp"
+            android:text="@string/remind_addr"
+            android:textColor="@color/subtitle" />
+        
+        <ImageButton
+            android:id="@+id/btn_clear_addr"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:src="@drawable/cancel_selector"
+            android:layout_gravity="right"
+            android:visibility="gone" 
+         />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/reminder_users"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_div2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:text="@string/remind_users"
+            android:textColor="@color/drawer_bg_color" />
+
+        <include
+            android:id="@+id/remind_memo_users"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            layout="@layout/memo_users" />
+    </LinearLayout>
+
+</LinearLayout>

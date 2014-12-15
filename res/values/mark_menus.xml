@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mark_menu_icons">
+        <item >@drawable/mark_as_done</item>
+        <item >@drawable/mark_as_todo</item>
+        <item >@drawable/mark_as_idea</item>
+        <item >@drawable/mark_as_star</item>
+        <item >@drawable/mark_as_phone</item>
+        <item >@drawable/mark_as_meeting</item>
+        <item >@drawable/mark_as_heart</item>
+        <item >@drawable/mark_as_smile</item>
+        <item >@drawable/mark_as_surprise</item>
+        <item >@drawable/mark_as_tongue</item>
+        <item >@drawable/mark_as_love</item>
+        <item >@drawable/mark_as_priority1</item>
+        <item >@drawable/mark_as_priority2</item>
+        <item >@drawable/mark_as_priority3</item>
+        <item >@drawable/mark_as_priority4</item>
+        <item >@drawable/mark_as_priority5</item>
+        <item >@drawable/mark_as_priority6</item>
+        <item >@drawable/mark_as_priority7</item>
+        <item >@drawable/mark_as_priority8</item>
+        <item >@drawable/mark_as_priority9</item>
+    </string-array>
+    <string-array name="mark_menu_labels">
+        <item >@string/mark_as_done</item>
+        <item >@string/mark_as_todo</item>
+        <item >@string/mark_as_idea</item>
+        <item >@string/mark_as_star</item>
+        <item >@string/mark_as_phone</item>
+        <item >@string/mark_as_meeting</item>
+        <item >@string/mark_as_heart</item>
+        <item >@string/mark_as_smile</item>
+        <item >@string/mark_as_surprise</item>
+        <item >@string/mark_as_tongue</item>
+        <item >@string/mark_as_love</item>
+        <item >@string/mark_as_priority1</item>
+        <item >@string/mark_as_priority2</item>
+        <item >@string/mark_as_priority3</item>
+        <item >@string/mark_as_priority4</item>
+        <item >@string/mark_as_priority5</item>
+        <item >@string/mark_as_priority6</item>
+        <item >@string/mark_as_priority7</item>
+        <item >@string/mark_as_priority8</item>
+        <item >@string/mark_as_priority9</item>
+    </string-array>
+</resources>

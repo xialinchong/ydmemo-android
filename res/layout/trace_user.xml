@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/FrameLayout1"
+    android:background="@null"
+    android:layout_width="46dp"
+    android:layout_height="46dp">
+
+    <com.yidianhulian.ydmemo.view.CircleImageView
+        android:id="@+id/trace_user_avatar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+        android:src="@drawable/avatar" />
+
+    <ImageView
+        android:id="@+id/trace_user_type"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="bottom|right"
+        android:paddingTop="5dp"
+        android:src="@drawable/mark_as_done" />
+
+    <Button
+        android:id="@+id/trace_user_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@null" />
+
+</FrameLayout>

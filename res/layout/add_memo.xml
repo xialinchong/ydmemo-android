@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    android:orientation="vertical"
+    android:paddingTop="10dp" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" >
+
+        <EditText
+            android:id="@+id/add_memo_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:maxLength="100"
+            android:minHeight="44dp"
+            android:paddingLeft="110dp" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:gravity="left|center"
+            android:paddingLeft="10dp"
+            android:text="@string/memo_subject"
+            android:textColor="@color/subtitle" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menu_div2" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" >
+
+        <EditText
+            android:id="@+id/add_memo_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:maxLength="140"
+            android:minHeight="44dp"
+            android:paddingLeft="110dp" >
+        </EditText>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:gravity="left|center"
+            android:maxLength="140"
+            android:paddingLeft="10dp"
+            android:text="@string/memo_desc"
+            android:textColor="@color/subtitle" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="left|center"
+        android:paddingLeft="20dp"
+        android:text="@string/remind"
+        android:textColor="@color/drawer_bg_color" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menu_div2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/add_memo_remind_date_btn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/date_and_time"
+            android:drawablePadding="5dp"
+            android:gravity="left|center"
+            android:paddingLeft="15dp"
+            android:text="@string/touch_select_date" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp" >
+
+            <CheckBox
+                android:id="@+id/add_memo_remind_chk"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:clickable="false"
+                android:text="" />
+
+            <Button
+                android:id="@+id/add_memo_remind_all_btn"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:drawableLeft="@drawable/remind_follower"
+                android:drawablePadding="5dp"
+                android:gravity="left|center"
+                android:paddingLeft="15dp"
+                android:text="@string/remind_all_followers" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="left|center"
+        android:paddingLeft="20dp"
+        android:text="@string/share_to_users"
+        android:textColor="@color/drawer_bg_color" />
+
+    <include
+        android:id="@+id/add_memo_follower"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        layout="@layout/memo_users" />
+
+</LinearLayout>

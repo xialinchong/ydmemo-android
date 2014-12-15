@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 副标题颜色，阴影颜色 -->
+    <color name="subtitle">#666666</color>
+    <color name="datecolor">#aaaaaa</color>
+    <color name="drawer_menu_selected_bg">#efefef</color>
+    <color name="drawer_bg_color">#38536c</color>
+    <color name="drawer_bg_light_color">#4a6c8b</color>
+    <color name="red">#cc3333</color>
+    <color name="main_background">#f1f1f1</color>
+    <color name="lightgray">#eaeaea</color>
+    <color name="white_alpha">#80ffffff</color>
+    <color name="black_alpha">#80000000</color>
+</resources>

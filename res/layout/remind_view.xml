@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <!-- 该layout定义Cell边距 -->
+
+    <LinearLayout
+        android:id="@+id/remind_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/reminder_bg"
+        android:clickable="false"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center|left"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/reminder_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/reminder_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/remind_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/remind_bg"
+        android:layout_alignLeft="@+id/remind_bg"
+        android:layout_alignRight="@+id/remind_bg"
+        android:layout_alignTop="@+id/remind_bg"
+        android:background="@drawable/mask_btn_selector"
+        android:text="" />
+
+</RelativeLayout>

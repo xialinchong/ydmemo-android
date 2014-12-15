@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="comment_menu_icons">
+        <item >@drawable/copy</item>
+        <item >@drawable/remove</item>
+        <item >@drawable/reply</item>
+        <item >@drawable/notify_new_reminder</item>
+        <item >0</item>
+    </string-array>
+    <string-array name="comment_menu_label">
+        <item >@string/copy</item>
+        <item >@string/mark_as_nothing</item>
+        <item >@string/reply_comment</item>
+        <item >@string/notify_me_later</item>
+        <item >@string/comment_mark_as</item>
+        
+    </string-array>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingBottom="10dp" 
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/contact_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/avatar" />
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/contact_avatar"
+        android:text="@string/placeholder"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/contact_cellphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/contact_name"
+        android:layout_below="@+id/contact_name"
+        android:text="@string/placeholder"
+        android:textColor="@color/subtitle" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/contact_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:visibility="invisible" />
+
+        <CheckBox
+            android:id="@+id/contact_chk"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="30dp"
+            android:button="@null"
+            android:background="@drawable/checkbox_selector"
+            android:clickable="false" />
+    </LinearLayout>
+
+</RelativeLayout>

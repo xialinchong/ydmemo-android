@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:paddingTop="5dp"
+    android:orientation="vertical" >
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/memo_comments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:descendantFocusability="blocksDescendants"
+        android:divider="@null"
+        android:layout_above="@+id/post_comment_panel"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrMode="both"
+        tools:listitem="@layout/cell_memo" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/comment_keyboard" />
+
+</RelativeLayout>
